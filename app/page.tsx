@@ -1,6 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { useState, FormEvent, ChangeEvent, useEffect } from "react";
+import Image from "next/image";
 
 export default function Home() {
   const router = useRouter();
@@ -192,9 +193,11 @@ export default function Home() {
             {!preview ? (
               <>
                 <div className="upload-icon p-2 border-1 border-gray-700 bg-white/10 inline-block rounded-xl">
-                  <img
+                  <Image
                     src="/assets/images/icon-upload.svg"
                     alt="Upload"
+                    width={32}
+                    height={32}
                     className="w-8 h-8"
                   />
                 </div>
@@ -239,9 +242,11 @@ export default function Home() {
           </div>
           <div className="upload-limit">
             <div className="flex items-center gap-2 mt-2">
-              <img
+              <Image
                 src="/assets/images/icon-info.svg"
                 alt="Info"
+                width={16}
+                height={16}
                 className="w-4 h-4"
               />
               <p className="text-xs text-gray-400">

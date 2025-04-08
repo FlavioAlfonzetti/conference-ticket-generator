@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function SuccessPage() {
   const [userData, setUserData] = useState({
@@ -30,17 +31,24 @@ export default function SuccessPage() {
           ready.
         </h1>
         <p className="text-xl text-center text-white">
-          We've emailed your ticket to{" "}
+          We&apos;ve emailed your ticket to{" "}
           <span className="text-custom-orange-500">{userData.email}</span> and
           will send updates in the run up to the event.
         </p>
         <div className="mt-20 relative">
-          <img src="/assets/images/pattern-ticket.svg" alt="Ticket" />
+          <Image
+            src="/assets/images/pattern-ticket.svg"
+            alt="Ticket"
+            width={500}
+            height={300}
+          />
           <div className="absolute inset-0 p-5">
             <div className="flex gap-4 items-start">
-              <img
+              <Image
                 src="/assets/images/logo-mark.svg"
                 alt="logo-mark"
+                width={28}
+                height={28}
                 className="w-7 h-7"
               />
               <div className="flex flex-col">
