@@ -1,3 +1,5 @@
+### **Live demo**: https://conference-ticket-generator-dbgs7g7zp.vercel.app/
+
 ### Functionalities:
 • The app will require you to add some personal info to generate your ticket:  
   - **Avatar picture**: file type must be `.jpg` or `.png`, max size of 500KB. You can either drag and drop or click on the displayed area to upload your picture   
