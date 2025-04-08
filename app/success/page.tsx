@@ -62,7 +62,7 @@ export default function SuccessPage() {
             </div>
             <div className="mt-auto absolute bottom-4">
               <div className="flex items-center gap-4">
-                <img
+                <Image
                   src={
                     typeof userData.avatar === "string" &&
                     userData.avatar.startsWith("data:image")
@@ -70,6 +70,8 @@ export default function SuccessPage() {
                       : "/assets/images/image-avatar.jpg"
                   }
                   alt="Avatar"
+                  width={64}
+                  height={64}
                   className="w-13 h-13 rounded-xl object-cover [@media(min-width:500px)]:w-16 [@media(min-width:500px)]:h-16"
                 />
                 <div>
@@ -77,14 +79,19 @@ export default function SuccessPage() {
                     {firstName} {lastName}
                   </p>
                   <p className="text-md tracking-wide text-gray-400 flex items-center gap-1">
-                    <img src="/assets/images/icon-github.svg" alt="" />
+                    <Image
+                      src="/assets/images/icon-github.svg"
+                      alt="GitHub"
+                      width={16}
+                      height={16}
+                    />
                     {userData.githubUsername}
                   </p>
                 </div>
               </div>
             </div>
-            <div className="absolute right-8 bottom-8 origin-right rotate-90 [@media(min-width:500px)]:bottom-14 [@media(min-width:500px)]:right-10 ">
-              <p className="text-gray-500 text-2xl tracking-widest [@media(min-width:500px)]:text-[1.4rem] [@media(min-width:500px)]:tracking-normal ">
+            <div className="absolute right-8 bottom-8 origin-right rotate-90 [@media(min-width:500px)]:bottom-14 [@media(min-width:500px)]:right-10">
+              <p className="text-gray-500 text-2xl tracking-widest [@media(min-width:500px)]:text-[1.4rem] [@media(min-width:500px)]:tracking-normal">
                 #01609
               </p>
             </div>
