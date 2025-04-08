@@ -209,11 +209,15 @@ export default function Home() {
               </>
             ) : (
               <div>
-                <img
-                  src={preview}
-                  alt="Preview"
-                  className="w-16 h-16 border-2 border-neutral-500 rounded-2xl object-cover mx-auto"
-                />
+                {preview && (
+                  <Image
+                    src={preview}
+                    alt="Preview"
+                    width={64}
+                    height={64}
+                    className="w-16 h-16 border-2 border-neutral-500 rounded-2xl object-cover mx-auto"
+                  />
+                )}
                 <div className="mt-4 flex gap-4 justify-center">
                   <button
                     type="button"
