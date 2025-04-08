@@ -170,7 +170,7 @@ export default function Home() {
         Your Journey to Coding Conf 2025 Starts Here!
       </h1>
       <p className="text-xl text-gray-300 text-center">
-        Secure your spot at next year's biggest coding conference.
+        Secure your spot at next year&apos;s biggest coding conference.
       </p>
       <form className="max-w-md mx-auto" onSubmit={handleSubmit}>
         {/* Avatar upload section */}
