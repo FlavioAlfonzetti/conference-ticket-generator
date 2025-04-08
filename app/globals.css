@@ -1,26 +1,53 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: "Inconsolata";
+  src: url("/assets/fonts/Inconsolata-VariableFont_wdth\,wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-display: swap;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+  --color-custom-orange-500: hsl(7, 86%, 67%);
+  --color-custom-orange-700: hsl(7, 71%, 60%);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inconsolata", Arial, Helvetica, sans-serif;
+  background-image: url("/assets/images/pattern-lines.svg"),
+    url("/assets/images/pattern-squiggly-line-top.svg"),
+    url("/assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg"),
+    url("/assets/images/background-mobile.png");
+  background-size: cover, 100px, 350px, cover;
+  background-repeat: repeat, no-repeat, no-repeat, no-repeat;
+  background-position: center, right 20px, left bottom, center;
+  background-attachment: fixed, scroll, scroll, scroll;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-image: url("/assets/images/pattern-lines.svg"),
+      url("/assets/images/pattern-squiggly-line-top.svg"),
+      url("/assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg"),
+      url("/assets/images/background-tablet.png");
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    background-image: url("/assets/images/pattern-lines.svg"),
+      url("/assets/images/pattern-squiggly-line-top.svg"),
+      url("/assets/images/pattern-squiggly-line-bottom-desktop.svg"),
+      url("/assets/images/background-desktop.png");
+    background-size: cover, 100px, 900px, cover;
+    background-position: center, right 20px, -15% bottom, center;
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(to right, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
