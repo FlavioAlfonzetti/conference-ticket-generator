@@ -7,4 +7,4 @@
   - **Email Address**: must pass a regex validity test  
   - **GitHub Username**: must contain one or more letters, numbers and hyphens  
 
-• In this mock version, your data will be stored locally using localStorage
+• Run locally, your data will be stored using localStorage
