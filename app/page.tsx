@@ -222,7 +222,7 @@ export default function Home() {
                   <button
                     type="button"
                     onClick={(e) => {
-                      e.stopPropagation(); // Prevent container click
+                      e.stopPropagation(); 
                       setFormData((prev) => ({ ...prev, avatar: null }));
                       setPreview("");
                     }}
@@ -233,7 +233,7 @@ export default function Home() {
                   <button
                     type="button"
                     onClick={(e) => {
-                      e.stopPropagation(); // Prevent container click
+                      e.stopPropagation(); 
                       document.getElementById("avatar-upload")?.click();
                     }}
                     className="cursor-pointer px-4 py-1 text-sm text-neutral-300 bg-neutral-700 rounded-sm hover:bg-neutral-600"
@@ -263,7 +263,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Form fields will go here */}
         <div className="mt-6">
           <label className="text-xl text-white block  mb-2">Full Name</label>
           <input
